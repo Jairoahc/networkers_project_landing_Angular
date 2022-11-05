@@ -1,0 +1,37 @@
+<div class="backcolor">
+    <div class="d-flex justify-content-center m-5 py-5">
+      <div class="card backcolorsub border border-primary " style="width: 95%;">
+        <div class="card-body text-center">
+          <h3 class="card-title p-3 text-white newfont">{{this.titulobanner}}</h3>
+          <input class="inputname newfont" type="text" placeholder="Nombre">
+          <input class="inputname newfont" type="email" placeholder="Correo Electrónico">
+          
+        </div>
+        <div id="liveAlertPlaceholder"></div>
+        <button type="button" class="btn btn-secondary subscribebutton newfont" id="liveAlertBtn">{{this.btntext}}</button> 
+        <script>const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+          const alert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+              `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+              `   <div>${message}</div>`,
+              '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+              '</div>'
+            ].join('')
+          
+            alertPlaceholder.append(wrapper)
+          }
+          
+          const alertTrigger = document.getElementById('liveAlertBtn')
+          if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+              alert('¡Te has suscrito a nuestro Newsletter exitosamente!', 'success')
+            })
+          }
+          </script>
+      </div>
+
+    </div>
+
+  </div>

@@ -1,0 +1,15 @@
+.logowidth {
+    width: 210px !important;
+}
+
+.fixingw {
+    width: 100% !important;
+    font-family: 'Inika', serif;
+    font-size: 20px;
+
+
+}
+
+.hoverbutton:hover {
+    color: #FDCD12 !important;
+}

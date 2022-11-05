@@ -1,0 +1,42 @@
+.newfont {
+    font-family: 'Inika', serif !important;
+
+}
+.subscribebutton {
+    background-color: #7B52AD !important ;
+    width: 160px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.subscribebutton:hover {
+    color: #FDCD12 !important;
+}
+.backcolorsub {
+    background-color: #1A6DAF !important;
+}
+
+/*Aplicacion de media queries para el responsive del eslogan y el parrafo*/
+@media (min-width: 701px) {
+    .inputname {
+        width:50%;
+        height: 35px;
+        border-radius: 12px;
+        margin: 10px;
+    }
+    
+}
+
+@media (max-width: 701px) {
+    .inputname {
+        width:90%;
+        height: 35px;
+        border-radius: 12px;
+        margin: 10px;
+    }
+
+}
+.backcolor {
+    background-color: #F5F5F5;
+}

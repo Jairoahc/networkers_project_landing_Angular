@@ -1,0 +1,50 @@
+
+/*Aplicacion de media queries para el responsive del eslogan y el parrafo*/
+@media (min-width: 701px) {
+    .tituloeslogan {
+        font-family: 'Inika', serif;
+        color: #1A6DAF;
+        text-align: center;
+        font-size: 80px;
+        
+}
+
+
+}
+@media (max-width: 701px) {
+    .tituloeslogan {
+        font-family: 'Inika', serif;
+        color: #1A6DAF;
+        text-align: center;
+        font-size: 35px;
+}
+}
+
+
+
+.parrafocontainer {
+    margin: 80px;
+}
+
+@media (min-width: 701px) {
+    .parrafo1 {
+        font-family: 'Inika', serif;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+    
+    }
+
+}
+
+@media (max-width: 701px) {
+    .parrafo1 {
+        font-family: 'Inika', serif;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+    
+    }
+
+}
+

@@ -1,0 +1,146 @@
+/*aplicacion de media queries para el div de la imagen,de manera que no aparezca en la pantalla cuando sea smartphone*/
+@media (min-width: 980px) {
+    .bannerimg {
+        width: 50%;
+    
+    }
+}
+@media (max-width: 980px) {
+    .bannerimg {
+        width: 0%;
+    
+    }
+}
+/*aplicacion de media queries para  la imagen,de manera que se le indique de que tamaño sera en los tamaños en los cuales aparecera en la pantalla*/
+@media (min-width: 980px) {
+    .imgbannerqen {
+        width:480px;
+        margin: 25px;
+
+    }
+
+}
+@media (max-width: 980px) {
+    .imgbannerqen {
+        width: 0%;
+    }
+
+
+}
+
+@media (min-width: 980px) {
+    .bannertext {
+        width: 50%;
+    
+    }
+}
+@media (max-width: 980px) {
+    .bannertext {
+        width: 100%;
+    
+    }
+}
+
+
+
+/*Aplicacion de media queries para el responsive del parrafo del banner de la pantalla de que es networkers*/
+@media (min-width: 980px) {
+    .parrafobanner {
+        font-family: 'Inika', serif !important;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 150px ;
+        margin-bottom: 150px;
+        margin-left: 100px;
+        margin-right: 100px;
+    
+    }
+
+}
+
+@media (max-width: 980px) {
+    .parrafobanner {
+        font-family: 'Inika', serif;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 40px ;
+        margin-bottom: 40px;
+        margin-left: 18px;
+        margin-right: 18px;
+        padding: 10px;
+    
+    }
+
+}
+
+.banenterprise {
+    width: 350px;
+    height:350px;
+    border-radius: 130px;
+}
+
+.employers {
+    width: 350px;
+    border-radius: 130px;
+    height:350px; 
+
+}
+
+.newfont1 {
+    font-family: 'Inika', serif !important;
+    font-size: 22px;
+
+}
+
+
+.backcolorcard1 {
+    background-color: #7B52AD;
+    color: white !important;
+    
+}
+
+.referralbutton {
+    background-color: #FDCD12 !important ;
+    width: 220px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+
+
+}
+
+.referralbutton:hover {
+    color: #7B52AD !important;
+}
+
+.backcolorsub {
+    background-color: #1A6DAF !important;
+}
+
+/*Aplicacion de media queries para el responsive del eslogan y el parrafo*/
+@media (min-width: 701px) {
+    .inputname {
+        width:50%;
+        height: 35px;
+        border-radius: 12px;
+        margin: 10px;
+    }
+    
+}
+
+@media (max-width: 701px) {
+    .inputname {
+        width:90%;
+        height: 35px;
+        border-radius: 12px;
+        margin: 10px;
+    }
+
+}
+.newfont {
+    font-family: 'Inika', serif !important;
+
+}
+
+

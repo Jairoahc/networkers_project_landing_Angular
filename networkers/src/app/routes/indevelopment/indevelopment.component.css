@@ -1,0 +1,44 @@
+
+/*Aplicacion de media queries para el responsive del eslogan y el parrafo*/
+@media (min-width: 701px) {
+    .underconstruction{
+        width: 100% !important;
+        background-size: cover;
+        background-image: url(/assets/imgjairo/Underconstruction.jpg);
+        
+    }
+    .tamaño{
+        height: 700px;
+
+    }
+    .lettersize{
+        font-size: 80px;
+        font-family: 'Inika', serif !important;
+        color: #1A6DAF ;
+
+        
+    }
+    
+
+}
+
+@media (max-width: 701px) {
+    .underconstruction{
+        width: 100% !important;
+        background-size: cover;
+        background-image: url(/assets/imgjairo/Underconstruction.jpg);
+        
+    }
+    .tamaño{
+        height: 300px;
+
+    }
+    .lettersize{
+        font-size: 30px;
+        font-family: 'Inika', serif !important;
+        color: #1A6DAF ;
+
+        
+    }
+
+}
