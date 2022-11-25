@@ -1,0 +1,14 @@
+@media (min-width: 980px) {
+    .wsize {
+        width: 50% !important;
+        
+    
+    }
+}
+@media (max-width: 980px) {
+    .wsize {
+        width: 75% !important;
+        
+    
+    }
+}

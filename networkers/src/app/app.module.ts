@@ -12,6 +12,10 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { Card1Component } from './components/card1/card1.component';
 import { BannerSubscriptionComponent } from './components/banner-subscription/banner-subscription.component';
 import { IndevelopmentComponent } from './routes/indevelopment/indevelopment.component';
+import { SignupComponent } from './routes/signup/signup.component';
+import { SignupcComponent } from './components/signupc/signupc.component';
+import { LogincComponent } from './components/loginc/loginc.component';
+import { LoginComponent } from './routes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { IndevelopmentComponent } from './routes/indevelopment/indevelopment.com
     CarruselComponent,
     Card1Component,
     BannerSubscriptionComponent,
-    IndevelopmentComponent
+    IndevelopmentComponent,
+    SignupComponent,
+    SignupcComponent,
+    LogincComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
