@@ -18,6 +18,8 @@ import { SignupcComponent } from './components/signupc/signupc.component';
 import { LogincComponent } from './components/loginc/loginc.component';
 import { LoginComponent } from './routes/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './routes/home/home.component';
+import { HomecComponent } from './components/homec/homec.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
     SignupComponent,
     SignupcComponent,
     LogincComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    HomecComponent
   ],
   imports: [
     BrowserModule,

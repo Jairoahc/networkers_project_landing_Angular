@@ -9,19 +9,24 @@
                     <img class="logosize rounded-4" src="/assets/imgjairo/logonetworkers.png" alt="">
                 </div>
             </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail" class="form-label newfont" >Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail" placeholder="Name@email.com...">
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label newfont">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-              </div>
-            <div class="mb-3">
-              <label class="form-check-label" for="exampleCheck1 newfont"><a href="">Did you forget your password?</a></label>
-            </div>
 
-            <button type="submit" class="btn btn-warning newfont ">Sign Up</button>
+            <form #loginForm="ngForm">
+              
+            <div class="mb-3">
+              <label for="exampleInputEmail" class="form-label newfont" >Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail" placeholder="Name@email.com..." [ngModel]="this.userService.currentUser.email" >
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label newfont">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="this.userService.currentUser.password">
+            </div>
+          <div class="mb-3">
+            <label class="form-check-label" for="exampleCheck1 newfont"><a href="">Did you forget your password?</a></label>
+          </div>
+
+            </form>
+
+            <button type="submit" class="btn btn-warning newfont" (click)="this.login(loginForm)"> <i class="material-icons pe-2"></i>Sign Up</button>
 
             <!--Botones de redes sociales-->
 
