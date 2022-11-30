@@ -17,7 +17,7 @@
               </div>
               <div class="mb-3">
                 <label for="exampleInputlastname" class="form-labe newfontl">Last name</label>
-                <input type="text" class="form-control" id="lastname" name="lastname" [ngModel]="this.userService.currentUser.lastname" >
+                <input type="text" class="form-control" id="lastName" name="lastName" [ngModel]="this.userService.currentUser.lastName" >
               </div>
               <div class="mb-3">
                   <label for="exampleInputEmail" class="form-label newfont" >Email</label>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputRepeatPassword1" class="form-label newfont"> Repeat Password</label>
-                  <input type="password" class="form-control" id="repeatnewpassword" name="repeatnewpassword" [ngModel]="this.userService.currentUser.repeatnewpassword">
+                  <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" [ngModel]="this.userService.currentUser.confirmPassword">
                 </div>
                 
           <div *ngIf="this.userService.currentUser.password">
@@ -66,7 +66,7 @@
                 <label class="form-check-label" for="exampleCheck1 newfont">Check me out</label>
               </div> -->
             </form>
-            <button type="submit" class="btn btn-warning newfont " (click)="this.signup(userForm)"> <i class="material-icons pe-2"></i> Sign Up </button>
+            <button class="btn btn-warning newfont " (click)="this.signup(userForm)"> <i class="material-icons pe-2"></i> Sign Up </button>
 
             <!--Botones de redes sociales-->
 

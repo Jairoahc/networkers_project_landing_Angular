@@ -3,6 +3,7 @@ import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/user.model';
 import { NgForm } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-signupc',
@@ -17,7 +18,7 @@ export class SignupcComponent implements OnInit {
   }
   signup (form: NgForm){
     let {name, lastName, email, password, age, city, country, occupation,  confirmPassword} = form.value
-
+    //console.log(form.value)
     if (!name || !lastName || !email || !password || !confirmPassword || !age || !city || !country || !confirmPassword || !occupation){
       Swal.fire({
         position: 'center',
@@ -64,7 +65,8 @@ export class SignupcComponent implements OnInit {
         )
       }
     )
-
+      this.userService.currentUser=new User()
+      form.resetForm()
   }
 
   }

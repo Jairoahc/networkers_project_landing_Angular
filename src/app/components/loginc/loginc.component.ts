@@ -20,7 +20,7 @@ export class LogincComponent implements OnInit {
   login(form: NgForm){
 
     let {email, password} = form.value
-
+    
     if(!email || !password){
       alert("Diligencie todos los campos")
       return
