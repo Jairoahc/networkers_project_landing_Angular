@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user.model';
 import { Router } from '@angular/router';
 
-/* import jwtDecode from 'jwt-decode'; */ // Para importar el jsonwebtoken en esta linea y el de la funcion de la linea 27
+import jwtDecode from 'jwt-decode'; // Para importar el jsonwebtoken en esta linea y el de la funcion de la linea 27
 
 @Injectable({
   providedIn: 'root',
@@ -24,11 +24,11 @@ export class UserService {
     return this.http.post(`${this.URL_API}/login`, {email, password});
   }
 
-/*   decodeToken(): any {
+  decodeToken(): any {
     let token = localStorage.getItem('token');
     let decoded = jwtDecode(token || 'Error en token'); // retornar el payload del token
     return decoded;
-  } */
+  }
 
   logOut() {
     localStorage.removeItem('token');
@@ -46,7 +46,7 @@ export class UserService {
     return false;
   }
 
- /*  isAdmin() {
+  /* isAdmin() {
     let token = localStorage.getItem('token') || false;
 
     if (token) {

@@ -48,7 +48,7 @@ export class SignupcComponent implements OnInit {
     this.userService.signUp(form.value).subscribe(
       (res) => {
         Swal.fire({
-          position: 'top-end',
+          position: 'center',
           icon: 'success',
           title: 'El usuario ha sido creado correctamente',
           showConfirmButton: false,

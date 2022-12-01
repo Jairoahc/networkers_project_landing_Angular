@@ -21,14 +21,32 @@ export class LogincComponent implements OnInit {
 
     let {email, password} = form.value
     console.log(form.value)
-    if(!email || !password){
-      alert("Diligencie todos los campos")
+    if(!email || !password){        {
+     
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        text: 'Por favor diligencie todos los campos',
+        showConfirmButton: true,
+      })
+  }
+      
+      /* alert("Diligencie todos los campos") */
       return
+      console.log(form.value)
     }
 
     this.userService.login(email, password).subscribe(
-      (res: any) => {
-        alert("Usuario logueado correctamente")
+      (res: any) =>
+        {
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Bienvenido a Networkers',
+            showConfirmButton: false,
+            timer: 2000
+          })
+        /* alert("Usuario logueado correctamente") */
         //localStorage.setItem('llave', valor)
         localStorage.setItem("token", res.token)
         this.router.navigate(['/home'])
@@ -36,8 +54,15 @@ export class LogincComponent implements OnInit {
         // proteger las vistar contra los usuarios que no esten logueados
         //mostrar los datos en la barra de navegación
       },
-      (err) => {
-        alert(err.error.msg)
+      (err) => 
+        {
+     
+          Swal.fire({
+            position: 'center',
+            icon: 'error',
+            text: 'El nombre de usuario o la contraseña es incorrecto',
+            showConfirmButton: true,
+          })
       }
     )
 

@@ -10,15 +10,15 @@
                 </div>
             </div>
 
-            <form #loginForm="ngForm">
+            <form #userForm="ngForm">
               
             <div class="mb-3">
               <label for="exampleInputEmail" class="form-label newfont" >Email</label>
-              <input type="email" class="form-control" id="exampleInputemail" placeholder="Name@email.com..." [ngModel]="this.userService.currentUser.email" >
+              <input type="email" class="form-control" id="email" placeholder="Name@email.com..." name="email" [(ngModel)]="this.userService.currentUser.email" >
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label newfont">Password</label>
-              <input type="password" class="form-control" id="exampleInputpassword" [(ngModel)]="this.userService.currentUser.password">
+              <input type="password" class="form-control" id="password" name="password" [(ngModel)]="this.userService.currentUser.password">
             </div>
           <div class="mb-3">
             <label class="form-check-label" for="exampleCheck1 newfont"><a href="">Did you forget your password?</a></label>
@@ -26,7 +26,7 @@
 
             </form>
 
-            <button type="submit" class="btn btn-warning newfont" (click)="this.login(loginForm)"> <i class="material-icons pe-2"></i>Sign Up</button>
+            <button type="submit" class="btn btn-warning newfont" (click)="this.login(userForm)"> <i class="material-icons pe-2"></i>Sign Up</button>
 
             <!--Botones de redes sociales-->
 
