@@ -20,7 +20,7 @@ export class LogincComponent implements OnInit {
   login(form: NgForm){
 
     let {email, password} = form.value
-    
+    console.log(form.value)
     if(!email || !password){
       alert("Diligencie todos los campos")
       return
@@ -28,6 +28,7 @@ export class LogincComponent implements OnInit {
 
     this.userService.login(email, password).subscribe(
       (res: any) => {
+        alert("Usuario logueado correctamente")
         //localStorage.setItem('llave', valor)
         localStorage.setItem("token", res.token)
         this.router.navigate(['/home'])

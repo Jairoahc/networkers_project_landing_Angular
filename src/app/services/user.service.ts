@@ -21,7 +21,7 @@ export class UserService {
   }
 
   login(email: string, password: string) {
-    return this.http.post(`${this.URL_API}/login`, { email, password });
+    return this.http.post(`${this.URL_API}/login`, {email, password});
   }
 
 /*   decodeToken(): any {
