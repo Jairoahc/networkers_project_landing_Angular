@@ -1,3 +1,80 @@
+<div>
+
+    <div>
+        <h1 class="tituloeslogan newfont">
+            Ofrece tus servicios y habilidades y encuentra empresas o personas que esten interesados en contratarte. Mejora tus ingresos, aumenta tus oportunidades y trabaja desde la comodidad de tu hogar!
+        </h1>
+
+    </div>
+    <div>
+        <h1 class=" newfont subtitle">
+            ¡Crea y ofrece tus servicios ahora en Networkers!
+        </h1>
+    </div>
+
+    <!--Div del boton-->
+    <div>
+            <!--  Button trigger modal -->
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-warning newfont" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Create
+                  </button>
+
+            </div>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 newfont " id="staticBackdropLabel">Creating Service </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div>
+                <!-- title: -->
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label newfont text-success">Service Title:</label>
+                    <input type="text" class="form-control" id="title" placeholder="Design UX/UI" name="title">
+                  </div>
+                <!-- price:  -->
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label newfont text-success">Price:</label>
+                    <input type="number" class="form-control" id="price" name="price" placeholder="200.000">
+                  </div>
+                <!-- description: -->
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label newfont text-success">Description:</label>
+                    <textarea class="form-control" id="description" name="description" rows="5" placeholder=" I will Design a modern app UI and UX..."></textarea>
+                  </div>
+               <!--  image:  -->
+               <div class="mb-3">
+                <label for="formFile" class="form-label newfont text-success">Image:</label>
+                <input class="form-control" type="file" id="image" name="image">
+              </div>
+                <!-- keywords: -->
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label newfont text-success">Service Title:</label>
+                    <input type="text" class="form-control" id="keywords" name="image" placeholder="App Design, Web Design.." name="title">
+                  </div>
+               <!--  phoneNumber: -->
+               <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label newfont text-success">Phone Number</label>
+                <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="+1470500500">
+              </div>
+            </div>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+    </div>
+</div>
+
 <section class="bg-dark">
     <div class="container tex-center mt-5">
         <button class="btn btn-success" onclick="services()">Ver servicios</button>

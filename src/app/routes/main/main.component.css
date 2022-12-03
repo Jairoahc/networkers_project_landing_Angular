@@ -1,6 +1,6 @@
 
 /*Aplicacion de media queries para el responsive del eslogan y el parrafo*/
-@media (min-width: 701px) {
+@media (min-width: 980px) {
     .tituloeslogan {
         font-family: 'Inika', serif;
         color: #1A6DAF;
@@ -11,7 +11,7 @@
 
 
 }
-@media (max-width: 701px) {
+@media (max-width: 980px) {
     .tituloeslogan {
         font-family: 'Inika', serif;
         color: #1A6DAF;
