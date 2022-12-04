@@ -7,7 +7,7 @@ import { Services } from '../models/services.model';
 })
 export class ServicesService {
 
-  URL_API = "http://localhost:5000/product"
+  URL_API = "http://localhost:5000/services"
   services: any //listar los productos
   currentServices: Services //crear - actualizar - eliminar el formulario
   shoppingCart: any

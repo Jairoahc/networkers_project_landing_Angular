@@ -30,43 +30,44 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <div>
+            <form #servicesForm = "ngForm">
+                <input type="hidden" id="_id" name="_id" [ngModel]="this.servicesService.currentServices._id">
                 <!-- title: -->
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label newfont text-success">Service Title:</label>
-                    <input type="text" class="form-control" id="title" placeholder="Design UX/UI" name="title">
+                    <input type="text" class="form-control" id="title" placeholder="Design UX/UI" name="title" [ngModel]="this.servicesService.currentServices.title">
                   </div>
                 <!-- price:  -->
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label newfont text-success">Price:</label>
-                    <input type="number" class="form-control" id="price" name="price" placeholder="200.000">
+                    <input type="number" class="form-control" id="price" name="price" placeholder="200.000" [ngModel]="this.servicesService.currentServices.price">
                   </div>
                 <!-- description: -->
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label newfont text-success">Description:</label>
-                    <textarea class="form-control" id="description" name="description" rows="5" placeholder=" I will Design a modern app UI and UX..."></textarea>
+                    <textarea class="form-control" id="description" name="description" rows="5" placeholder=" I will Design a modern app UI and UX..." [ngModel]="this.servicesService.currentServices.description"></textarea>
                   </div>
                <!--  image:  -->
                <div class="mb-3">
                 <label for="formFile" class="form-label newfont text-success">Image:</label>
-                <input class="form-control" type="file" id="image" name="image">
+                <input class="form-control" type="file" id="image" name="image" [ngModel]="this.servicesService.currentServices.image">
               </div>
                 <!-- keywords: -->
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label newfont text-success">Service Title:</label>
-                    <input type="text" class="form-control" id="keywords" name="image" placeholder="App Design, Web Design.." name="title">
+                    <label for="exampleFormControlInput1" class="form-label newfont text-success">Keywords:</label>
+                    <input type="text" class="form-control" id="keywords" name="keywords" placeholder="App Design, Web Design.." [ngModel]="this.servicesService.currentServices.keywords">
                   </div>
                <!--  phoneNumber: -->
                <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label newfont text-success">Phone Number</label>
-                <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="+1470500500">
+                <label for="exampleFormControlInput1" class="form-label newfont text-success">Phone Number:</label>
+                <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="+1470500500" [ngModel]="this.servicesService.currentServices.phoneNumber">
               </div>
-            </div>
+            </form>
         
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary">Save</button>
+          <button type="button" class="btn btn-primary" (click)="this.createService(servicesForm)"><i class="material-icons pe-2"></i>Save</button>
         </div>
       </div>
     </div>
@@ -75,15 +76,34 @@
     </div>
 </div>
 
-<section class="bg-dark">
-    <div class="container tex-center mt-5">
-        <button class="btn btn-success" onclick="services()">Ver servicios</button>
-    </div>
-    <div class="d-flex justify-content-evenly mt-5 flex-wrap" id="card-container">
-        
+
+<!--Get de los servicios colocados en tarjetas-->
+
+<section>
+  <div class="backcolor">
+      <style> @import url('https://fonts.googleapis.com/css2?family=Inika:wght@700&display=swap'); </style>
+      <div class="d-flex justify-content-around flex-wrap">
+
+          <div class="d-flex justify-content-around flex-wrap mt-4">
+              <div class="card text-white bg-primary mb-3" style="width: 18rem">
+                  <img *ngFor="let service of this.servicesService.services.data" src="{{ service.image }}" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                      <h5 class="card-title" *ngFor="let service of this.servicesService.services.data">{{ service.tittle }}</h5>
+                      <h6 *ngFor="let service of this.servicesService.services.data">{{ service.price }}</h6>
+                      <p class="card-text" *ngFor="let service of this.servicesService.services.data">{{ service.description }}
+                      </p>
+                      <!-- <a href="#" class="btn btn-warning">Go somewhere</a> -->
+                  </div>
+              </div>
+      </div>
+      </div>
+    
     </div>
 </section>
-    <!-- BS Scrips -->
-    <script src="apiservice.js"></script>
-    <script src="bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+  <!-- <app-card2></app-card2> -->
+
+  <!-- BS Scrips -->
+  <script src="../../services/services.service.ts"></script>
+  <script src="bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+

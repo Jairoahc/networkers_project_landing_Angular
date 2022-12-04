@@ -4,6 +4,7 @@ import { User } from 'src/app/models/user.model';
 import { NgForm } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { ThisReceiver } from '@angular/compiler';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signupc',
@@ -12,7 +13,7 @@ import { ThisReceiver } from '@angular/compiler';
 })
 export class SignupcComponent implements OnInit {
 
-  constructor(public userService: UserService) { }
+  constructor(public userService: UserService, public router: Router) { }
 
   ngOnInit(): void {
   }
@@ -52,8 +53,9 @@ export class SignupcComponent implements OnInit {
           icon: 'success',
           title: 'El usuario ha sido creado correctamente',
           showConfirmButton: false,
-          timer: 1500
+          timer: 3000
         })
+        this.router.navigate(['/login'])
 
         //navigate nos lleva al login
       },
