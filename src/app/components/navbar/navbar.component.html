@@ -14,9 +14,11 @@
           <div class="navbar-nav fixingw d-flex justify-content-around align-items-center">
               <a class="nav-link hoverbutton " aria-current="page" [routerLink]="['/que-es-net']">About</a>
               <a class="nav-link hoverbutton " aria-current="page" [routerLink]="['/home']">Home</a>
-              <a class="nav-link hoverbutton " aria-current="page" [routerLink]="['/login']">Log In</a>
+              <a class="nav-link hoverbutton abutton " aria-current="page" [routerLink]="['/login']" *ngIf="!this.userservice.isLoggedIn()">Log In</a>
               <a class="nav-link hoverbutton " aria-current="page" [routerLink]="['/signup']">Sign Up</a>
+              <a class="nav-link hoverbutton " aria-current="page" [routerLink]="['/main']" *ngIf="this.userservice.isLoggedIn()" (click)="this.logOut()">Log Out</a>
           </div>
+          
         </div>
       </div>
     </nav>

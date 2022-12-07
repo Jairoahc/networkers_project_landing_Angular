@@ -4,7 +4,8 @@ import { NgForm } from '@angular/forms';
 import { Services } from 'src/app/models/services.model';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
-import { async } from '@angular/core/testing';
+import { async, resetFakeAsyncZone } from '@angular/core/testing';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-homec',
@@ -13,7 +14,7 @@ import { async } from '@angular/core/testing';
 })
 export class HomecComponent implements OnInit {
 
-  constructor( public servicesService: ServicesService, public router: Router) { }
+  constructor( public servicesService: ServicesService, public router: Router, public userservice: UserService) { }
 
   ngOnInit(): void {
     this.getServices();
@@ -66,10 +67,8 @@ export class HomecComponent implements OnInit {
           showConfirmButton: false,
           timer: 3000
         })
-        this.router.navigate(['home'])
-/*         .then(() => {
-         window.location.reload();
-          }); */
+        form.reset()
+
 
       }
       this.servicesService.currentServices = new Services()
